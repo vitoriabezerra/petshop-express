@@ -1,0 +1,72 @@
+{
+    "pets": [
+      {
+        "nome": "Pituco",
+        "tipo": "cachorro",
+        "idade": "7",
+        "raca": "yorkshire",
+        "peso": "10",
+        "tutor": "Maria Luciene",
+        "contato": "(81) 99859-1395",
+        "vacinado": true,
+        "servicos": "['tosar', 'tosar', 'tosar', 'tosar', 'tosar', 'tosar']"
+      },
+      {
+        "nome": "Kaka",
+        "tipo": "cachorro",
+        "idade": "7",
+        "raca": "poodle",
+        "peso": "10",
+        "tutor": "Maria",
+        "contato": "(81) 99859-1390",
+        "vacinado": true,
+        "servicos": "[]"
+      },
+      {
+        "nome": "Kelly",
+        "tipo": "gato",
+        "idade": "7",
+        "raca": "fofa",
+        "peso": "10",
+        "tutor": "Maria Luciene",
+        "contato": "(81) 99859-1315",
+        "vacinado": true,
+        "servicos": "[]"
+      },
+      {
+        "nome": "Toto",
+        "tipo": "rato",
+        "idade": 7,
+        "raca": "Twister",
+        "peso": 0.3,
+        "tutor": "Leandro",
+        "contato": "(81) 99859-1395",
+        "vacinado": true,
+        "servicos": [
+          "banho"
+        ]
+      },
+      {
+        "nome": "Lana",
+        "tipo": "rato",
+        "idade": 7,
+        "raca": "Twister",
+        "peso": 0.3,
+        "tutor": "Leandro",
+        "contato": "(81) 99859-1395",
+        "vacinado": true,
+        "servicos": []
+      },
+      {
+        "nome": "Lana",
+        "tipo": "rato",
+        "idade": 7,
+        "raca": "Twister",
+        "peso": 0.3,
+        "tutor": "Leandro",
+        "contato": "(81) 99859-1395",
+        "vacinado": true,
+        "servicos": []
+      }
+    ]
+  }
