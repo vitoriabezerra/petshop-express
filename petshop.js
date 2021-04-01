@@ -4,7 +4,7 @@ const moment = require('moment');
 const fs = require('fs');
 let bancoDados = fs.readFileSync('./bancoDados.json', 'utf-8');
 
-bancoDados = JSON.parse();
+bancoDados = JSON.parse(bancoDados);
 
 const petshop ={
     atualizarBanco: () =>{
@@ -13,11 +13,13 @@ const petshop ={
     },
 
     listarPets : () =>{
+        let textoListaPets = "PETSHOP \n"
         bancoDados.pets.forEach( (pet) =>  {
             let {nome, idade, tipo, raca, vacinado, contato, tutor} = pet;
-            
-            console.log(`Nome: ${nome}, Tipo: ${tipo}, Idade: ${idade} anos, Raça: ${raca}, ${(vacinado) ? 'Vacinado': 'Não vacinado'}, Tutor: ${tutor}, Contato: ${contato}`);   
+
+            textoListaPets += (`Nome: ${nome}, Tipo: ${tipo}, Idade: ${idade} anos, Raça: ${raca}, ${(vacinado) ? 'Vacinado': 'Não vacinado'}, Tutor: ${tutor}, Contato: ${contato} \n`);   
         });
+        return textoListaPets;
     },
 
     vacinarPet : (pet) =>{
@@ -58,10 +60,11 @@ const petshop ={
             bancoDados.pets.push(novos);
         })
     
-        atualizarBanco();
+        petshop.atualizarBanco();
         novosClientes.forEach((pet) => {
             console.log(`${pet.nome} foi adicionado com sucesso!`);
         })
+        return(bancoDados.pets)
     },
 
     darBanhoPet : (pet) =>{
@@ -96,7 +99,7 @@ const petshop ={
 
     buscarPet : (nome) => {
         const busca = bancoDados.pets.find(petAtual => petAtual.nome == nome);
-        console.log(busca);
+        return busca;
     },
 
     fitrarTipoPet : (tipo) => {
